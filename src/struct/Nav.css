@@ -1,0 +1,62 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: -250px; /* прячем меню слева */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+
+#nav-toggle:checked + .nav {
+  left: 0;
+}
+
+
+.nav-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1100;
+  border-radius: 4px;
+}
+
+
+.logo {
+  margin-bottom: 30px;
+  padding-top: 40px;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+
+.nav ul {
+  list-style: none;
+}
+
+.nav ul li {
+  margin-bottom: 15px;
+}
+
+.nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+
+.nav ul li a:hover {
+  color: #00bfff;
+}

@@ -1,0 +1,16 @@
+body {
+  font-family: Arial, sans-serif;
+}
+#nav-toggle:checked + .nav {
+  left: 0;
+}
+main {
+  padding: 20px;
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+}
+
+/* Сдвиг основного контента при открытии меню */
+#nav-toggle:checked ~ main {
+  margin-left: 250px;
+}

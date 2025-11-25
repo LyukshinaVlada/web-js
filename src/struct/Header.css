@@ -1,0 +1,71 @@
+.header {
+  background: #222;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu-btn {
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.menu-btn {
+  font-size: 26px;
+  left: 150px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.nav-close {
+  position: fixed;
+  top: 0;
+  left: -250px; /* спрятано */
+  width: 250px;
+  height: 100%;
+  background: #1e1e1e;
+  color: white;
+  transition: left 0.3s ease;
+  padding-top: 70px; /* под header */
+  z-index: 1000;
+}
+
+.nav-open {
+  left: 0;
+}
+
+.nav-close ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-close ul li {
+  padding: 15px 20px;
+}
+
+.nav-close ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: background 0.2s;
+}
+
+.nav-close ul li a:hover {
+  background: #333;
+}
