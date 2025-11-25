@@ -1,62 +1,76 @@
-.nav {
+/* БОКОВОЕ МЕНЮ */
+.sidebar {
   position: fixed;
   top: 0;
-  left: -250px; /* прячем меню слева */
+  left: -300px;       /* полностью спрятано */
   width: 250px;
-  height: 100%;
-  background-color: #333;
+  height: 100vh;
+  background: #333;
   color: white;
   padding: 20px;
   transition: left 0.3s ease;
-  z-index: 1000;
+  z-index: 900;       /* ниже header! */
 }
 
-
-#nav-toggle:checked + .nav {
+/* МЕНЮ ВЫЕЗЖАЕТ */
+#nav-toggle:checked ~ .sidebar {
   left: 0;
 }
 
-
-.nav-toggle {
+/* КНОПКА ОТКРЫТИЯ */
+.menu-btn {
   position: fixed;
   top: 20px;
   left: 20px;
-  background-color: #333;
+  background: #333;
   color: white;
   padding: 10px 15px;
-  cursor: pointer;
-  z-index: 1100;
   border-radius: 4px;
+  cursor: pointer;
+  z-index: 1100;     /* поверх header, чтобы всегда была видна */
 }
 
-
-.logo {
-  margin-bottom: 30px;
-  padding-top: 40px;
+/* КНОПКА ЗАКРЫТИЯ */
+.close-btn {
+  display: block;
+  text-align: right;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
 }
 
-.logo a {
+/* ЛОГО */
+.nav-logo {
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+.nav-logo a {
   color: white;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 22px;
 }
 
-
-.nav ul {
+/* Список */
+.sidebar ul {
   list-style: none;
+  margin-top: 20px;
 }
 
-.nav ul li {
+.sidebar ul li {
   margin-bottom: 15px;
 }
 
-.nav ul li a {
+.sidebar ul li button {
+  width: 100%;
+  padding: 10px;
+  background: #444;
+  border: none;
   color: white;
-  text-decoration: none;
-  font-size: 18px;
-  transition: color 0.2s;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
-.nav ul li a:hover {
-  color: #00bfff;
+.sidebar ul li button:hover {
+  background: #555;
 }

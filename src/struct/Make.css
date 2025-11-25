@@ -1,16 +1,13 @@
-body {
-  font-family: Arial, sans-serif;
-}
-#nav-toggle:checked + .nav {
-  left: 0;
-}
-main {
-  padding: 20px;
-  margin-left: 0;
+.page {
   transition: margin-left 0.3s ease;
+  padding-top: 70px; /* чтобы header не перекрывал контент */
 }
 
-/* Сдвиг основного контента при открытии меню */
-#nav-toggle:checked ~ main {
+/* КОГДА МЕНЮ ОТКРЫТО — КОНТЕНТ СДВИГАЕТСЯ */
+#nav-toggle:checked ~ .page {
   margin-left: 250px;
+}
+
+main {
+  padding: 20px;
 }

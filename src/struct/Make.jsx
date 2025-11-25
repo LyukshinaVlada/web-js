@@ -4,20 +4,21 @@ import Footer from './Footer'
 import Header from './Header'
 import Nav from './Nav'
 
-
-export default function Make({children}){
-    return(
+export default function Make({ children }) {
+    return (
         <>
-        <Nav />
-        <main>
-            <article>
+            {/* Для управления выездом меню */}
+            <input type="checkbox" id="nav-toggle" hidden />
+
+            <Nav />
+
+            <div className="page">
                 <Header />
-                <section>
+                <main>
                     {children}
-                </section>
+                </main>
                 <Footer />
-            </article>
-        </main>
+            </div>
         </>
     )
 }
