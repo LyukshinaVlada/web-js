@@ -1,0 +1,18 @@
+.register-container {
+  width: 300px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+input, select {
+  padding: 8px;
+  font-size: 14px;
+}
+button {
+  padding: 8px;
+  cursor: pointer;
+}
+.register-message {
+  color: green;
+}

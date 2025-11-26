@@ -1,0 +1,77 @@
+/* HEADER */
+.header {
+  background: #222;
+  color: white;
+  padding: 15px 20px;
+
+  display: flex;
+  justify-content: space-between; /* Тайтл слева, кнопка справа */
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 1001;
+}
+
+.header_title {
+  padding-left:50px;
+}
+
+/* КНОПКА LOGIN — выравниваем нормально */
+.login-btn {
+  background: #444;
+  border: 1px solid #666;
+  padding-right: 50px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #555;
+}
+
+/* SIDEBAR — полностью скрыт */
+.nav-close {
+  position: fixed;
+  top: 0;
+  left: -260px; /* спрятано без остатков */
+  width: 250px;
+  height: 100%;
+  background: #1e1e1e;
+  color: white;
+
+  transition: left 0.3s ease;
+
+  padding-top: 70px; /* место под header */
+  z-index: 999;
+}
+
+/* Открытый */
+.nav-open {
+  left: 0;
+}
+
+/* СПИСОК В МЕНЮ */
+.nav-close ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-close ul li {
+  padding: 15px 20px;
+}
+
+.nav-close ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.nav-close ul li a:hover {
+  background: #333;
+}
